@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{CC471BCB-9092-4122-A4D3-AF1E9A45F49D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{AADBE12F-4112-44F9-AEE0-C00C2B1F6E85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{EBF2E6C9-9954-41D3-B0EA-170CF9EB9901}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4C3CBCBE-1996-4374-A23C-0CAE85DCB815}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{1ADB6811-F1A7-43C1-8805-53DAB97E824B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiphyExercise.Application", "GiphyExercise.Application\GiphyExercise.Application.csproj", "{2400CA29-828D-450A-8E76-F2486DAA0002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiphyExercise.Infrastructure", "GiphyExercise.Infrastructure\GiphyExercise.Infrastructure.csproj", "{3EBF4672-9545-45D0-8644-8C2EFFA30F0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiphyExercise.Api", "GiphyExercise.Api\GiphyExercise.Api.csproj", "{30C36AA4-321D-4060-BE41-0A34F30BC531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiphyExercise.Application.Tests", "GiphyExercise.Application.Tests\GiphyExercise.Application.Tests.csproj", "{F15436D2-3C4C-4FF0-8C56-77C4D612A216}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2400CA29-828D-450A-8E76-F2486DAA0002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2400CA29-828D-450A-8E76-F2486DAA0002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2400CA29-828D-450A-8E76-F2486DAA0002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2400CA29-828D-450A-8E76-F2486DAA0002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EBF4672-9545-45D0-8644-8C2EFFA30F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EBF4672-9545-45D0-8644-8C2EFFA30F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EBF4672-9545-45D0-8644-8C2EFFA30F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EBF4672-9545-45D0-8644-8C2EFFA30F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30C36AA4-321D-4060-BE41-0A34F30BC531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30C36AA4-321D-4060-BE41-0A34F30BC531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30C36AA4-321D-4060-BE41-0A34F30BC531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30C36AA4-321D-4060-BE41-0A34F30BC531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F15436D2-3C4C-4FF0-8C56-77C4D612A216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F15436D2-3C4C-4FF0-8C56-77C4D612A216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F15436D2-3C4C-4FF0-8C56-77C4D612A216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F15436D2-3C4C-4FF0-8C56-77C4D612A216}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2400CA29-828D-450A-8E76-F2486DAA0002} = {AADBE12F-4112-44F9-AEE0-C00C2B1F6E85}
+		{3EBF4672-9545-45D0-8644-8C2EFFA30F0B} = {EBF2E6C9-9954-41D3-B0EA-170CF9EB9901}
+		{30C36AA4-321D-4060-BE41-0A34F30BC531} = {1ADB6811-F1A7-43C1-8805-53DAB97E824B}
+		{F15436D2-3C4C-4FF0-8C56-77C4D612A216} = {4C3CBCBE-1996-4374-A23C-0CAE85DCB815}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1795B9F6-E2F1-43DF-AF32-35EF3CCBD52F}
+	EndGlobalSection
+EndGlobal
