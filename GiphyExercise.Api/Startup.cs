@@ -1,3 +1,5 @@
+using GiphyExercise.Infrastructure.Giphy;
+using GiphyExercise.Infrastructure.Giphy.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,11 +29,17 @@ namespace GiphyExercise.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
+            var giphyApiClientOption = Configuration.GetSection("GiphyApi").Get<GiphyApiClientOption>(o => o.BindNonPublicProperties = true);
+            services.AddSingleton(giphyApiClientOption);
+            services.AddHttpClient<IGiphyApiClient, GiphyApiClient>();
             services.AddControllers();
+          
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GiphyExercise.Api", Version = "v1" });
             });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
