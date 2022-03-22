@@ -1,11 +1,11 @@
-﻿using GiphyExercise.Infrastructure.Giphy.Models.ApiModels;
+﻿using GiphyExercise.Infrastructure.Giphies.Models.ApiModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GiphyExercise.Infrastructure.Giphy.Models.Mapper
+namespace GiphyExercise.Infrastructure.Giphies.Models.Mapper
 {
     internal static class GIFImageMapper
     {

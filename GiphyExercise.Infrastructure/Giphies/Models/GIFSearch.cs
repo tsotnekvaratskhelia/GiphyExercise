@@ -1,4 +1,4 @@
-﻿namespace GiphyExercise.Infrastructure.Giphy.Models
+﻿namespace GiphyExercise.Infrastructure.Giphies.Models
 {
     public class GIFSearch
     {

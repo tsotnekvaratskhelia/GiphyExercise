@@ -1,13 +1,13 @@
-﻿using System;
+﻿using GiphyExercise.Application.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace GiphyExercise.Application
 {
     public interface IGiphyAppService
     {
-
+        Task<List<GifSearchResultDto>> Search(GifSearchDto search);
     }
+
+
 }

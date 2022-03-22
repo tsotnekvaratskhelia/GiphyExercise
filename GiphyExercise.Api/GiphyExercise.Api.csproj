@@ -12,7 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GiphyExercise.Application\GiphyExercise.Application.csproj" />
+    <ProjectReference Include="..\GiphyExercise.Domain\GiphyExercise.Domain.csproj" />
+    <ProjectReference Include="..\GiphyExercise.Infrastructure.Cache\GiphyExercise.Infrastructure.Cache.csproj" />
     <ProjectReference Include="..\GiphyExercise.Infrastructure\GiphyExercise.Infrastructure.csproj" />
+    <ProjectReference Include="..\GiphyExercise.Persistence\GiphyExercise.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

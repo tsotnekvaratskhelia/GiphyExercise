@@ -1,10 +1,10 @@
-﻿using GiphyExercise.Infrastructure.Giphy;
-using GiphyExercise.Infrastructure.Giphy.Models;
+﻿using GiphyExercise.Application;
+using GiphyExercise.Application.Models;
+using GiphyExercise.Infrastructure.Giphies.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
 namespace GiphyExercise.Api.Controllers
@@ -13,17 +13,19 @@ namespace GiphyExercise.Api.Controllers
     [ApiController]
     public class GiphiesController : ControllerBase
     {
-        private readonly IGiphyApiClient _giphyApiClient;
+        private readonly IGiphyAppService _giphyAppService;
 
-        public GiphiesController(IGiphyApiClient giphyApiClient)
+        public GiphiesController(IGiphyAppService giphyAppService)
         {
-            _giphyApiClient = giphyApiClient;
+            _giphyAppService = giphyAppService;
         }
 
         [HttpGet]
-        public async Task<List<GIFImage>> Search([FromQuery]GIFSearch search)
+        [ProducesResponseType(typeof(GifSearchResultDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
+        public async Task<List<GifSearchResultDto>> Search([FromQuery] GifSearchDto search)
         {
-            return await _giphyApiClient.GetGifImages(search);
+            return await _giphyAppService.Search(search);
         }
     }
 }

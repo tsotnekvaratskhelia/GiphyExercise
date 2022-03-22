@@ -1,5 +1,9 @@
-using GiphyExercise.Infrastructure.Giphy;
-using GiphyExercise.Infrastructure.Giphy.Options;
+using GiphyExercise.Application;
+using GiphyExercise.Domain;
+using GiphyExercise.Infrastructure.Cache.Giphies;
+using GiphyExercise.Infrastructure.Giphies;
+using GiphyExercise.Infrastructure.Giphies.Options;
+using GiphyExercise.Persistence.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,10 +34,21 @@ namespace GiphyExercise.Api
         {
 
             var giphyApiClientOption = Configuration.GetSection("GiphyApi").Get<GiphyApiClientOption>(o => o.BindNonPublicProperties = true);
+
             services.AddSingleton(giphyApiClientOption);
-            services.AddHttpClient<IGiphyApiClient, GiphyApiClient>();
+            services.AddScoped<IGiphyRepository, GiphyRepository>();
+            services.AddHttpClient<GiphyApiClient>();
+            services.AddScoped<IGiphyApiClient>(provider =>
+            {
+                var giphyApiClient = provider.GetRequiredService<GiphyApiClient>();
+                var giphyRepository = provider.GetRequiredService<IGiphyRepository>();
+                return new GiphyApiClientCache(giphyApiClient, giphyRepository);
+
+            });
             services.AddControllers();
-          
+            services.AddDistributedMemoryCache();
+            services.AddScoped<IGiphyAppService, GiphyAppService>();
+       
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GiphyExercise.Api", Version = "v1" });

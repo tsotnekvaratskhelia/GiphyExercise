@@ -1,7 +1,7 @@
-﻿using GiphyExercise.Infrastructure.Giphy.Models;
-using GiphyExercise.Infrastructure.Giphy.Models.ApiModels;
-using GiphyExercise.Infrastructure.Giphy.Models.Mapper;
-using GiphyExercise.Infrastructure.Giphy.Options;
+﻿using GiphyExercise.Infrastructure.Giphies.Models;
+using GiphyExercise.Infrastructure.Giphies.Models.ApiModels;
+using GiphyExercise.Infrastructure.Giphies.Models.Mapper;
+using GiphyExercise.Infrastructure.Giphies.Options;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace GiphyExercise.Infrastructure.Giphy
+namespace GiphyExercise.Infrastructure.Giphies
 {
     public class GiphyApiClient : IGiphyApiClient
     {

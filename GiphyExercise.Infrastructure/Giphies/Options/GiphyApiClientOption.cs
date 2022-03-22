@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GiphyExercise.Infrastructure.Giphy.Options
+namespace GiphyExercise.Infrastructure.Giphies.Options
 {
     public class GiphyApiClientOption
     {

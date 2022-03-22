@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GiphyExercise.Infrastructure.Giphy.Models.ApiModels
+namespace GiphyExercise.Infrastructure.Giphies.Models.ApiModels
 {
     internal class GIFResponseModel
     {
